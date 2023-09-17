@@ -7,7 +7,8 @@ Pour le moment ce logiciel est assez peu précis, il a 2 façons de calculer l'a
 Il semblerait que:
 
 - les ïambes à peu près aussi communes que les trochées, et les anapestes que les amphibraques
-- les pieds binaires sont plus communs que les pieds ternaires
+
+Les mots binaires sont plus communs que les mots ternaires. Il faudrait considérer les associations possible des mots monosyllabiques (qui peuvent par exemple s'associer à un mot dissyllabique pour former un pied ternaire).
 
 ## Lancer l'analyse
 
@@ -15,7 +16,7 @@ Ce logiciel utilise la base de donnée fréquentielle [Lexique](http://www.lexiq
 
 ```sh
 ./freq_pied.py path/to/lexique.tsv
-./longueur_syllabique_moyenne.py path/to/lexique.tsv
+./longueur_syllabique.py path/to/lexique.tsv
 ```
 
 ### Nix
@@ -25,5 +26,5 @@ Si [Nix](https://nixos.org/) est installé, il peut mettre en place automatiquem
 ```sh
 nix-shell
 ./freq_pied.py
-./longueur_syllabique_moyenne.py
+./longueur_syllabique.py
 ```
