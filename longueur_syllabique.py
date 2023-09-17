@@ -19,17 +19,20 @@ def main():
 
 	df = utils.add_nbsyll(df)
 
-	wa_films = weighted_mean(df, "nbsyll", "freqfilms2")
-	print(f"Nombre de syllabe moyen par mot (films): {wa_films}")
+	# Cas le plus plausible: les monosyllabes ne sont pas accentués
+	df["acc_mono_bref"] = df["nbsyll"].apply(lambda x: 0 if x == 1 else 1/x)
+	# Cas extrême: les monosyllabes sont accentués
+	df["acc_mono_long"] = df["nbsyll"].apply(lambda x: 1 if x == 1 else 1/x)
 
-	wa_livres = weighted_mean(df, "nbsyll", "freqlivres")
-	print(f"Nombre de syllabe moyen par mot (livres): {wa_livres}")
+	print("Longueur moyenne du pied reconstitué")
 
-	wm_films = weighted_median(df, "nbsyll", "freqfilms2")
-	print(f"Nombre de syllabe median par mot (films): {wm_films}")
+	wa_films_mono_bref = weighted_mean(df, "acc_mono_bref", "freqfilms2")
+	wa_films_mono_long = weighted_mean(df, "acc_mono_long", "freqfilms2")
+	print(f"Films: mono_bref {1/wa_films_mono_bref}, mono_long {1/wa_films_mono_long}")
 
-	wm_livres = weighted_median(df, "nbsyll", "freqlivres")
-	print(f"Nombre de syllabe median par mot (livres): {wm_livres}")
+	wa_livres_mono_bref = weighted_mean(df, "acc_mono_bref", "freqlivres")
+	wa_livres_mono_long = weighted_mean(df, "acc_mono_long", "freqlivres")
+	print(f"Livres: mono_bref {1/wa_livres_mono_bref}, mono_long {1/wa_livres_mono_long}")
 
 if __name__ == "__main__":
 	main()

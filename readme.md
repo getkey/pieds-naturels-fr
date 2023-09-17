@@ -1,14 +1,13 @@
 # Pieds poétiques naturels en français
 
-Le but de ce logiciel est de calculer quel types de pieds correspondent fréquemment aux mots français. Autrement dit, quel pied est le plus naturel en français.
+Le but de ce logiciel est de calculer quels types de pieds correspondent fréquemment aux mots français. Autrement dit, quel pied est le plus naturel en français.
 
 Pour le moment ce logiciel est assez peu précis, il a 2 façons de calculer l'accent principal et ne calcule aucun accent secondaire.
 
 Il semblerait que:
 
-- les ïambes à peu près aussi communes que les trochées, et les anapestes que les amphibraques
-
-Les mots binaires sont plus communs que les mots ternaires. Il faudrait considérer les associations possible des mots monosyllabiques (qui peuvent par exemple s'associer à un mot dissyllabique pour former un pied ternaire).
+- les mots oxytons sont à peu près aussi communs que les mots paroxytons (donc les ïambes que les trochées, et les anapestes que les amphibraques). Voir `./freq_pied.py`.
+- étant donné la prévalence des monosyllabes (généralement non-accentués), les rythmes avec un certain nombre de temps semblent plus naturels. Cependant si on fait un parallèle avec la musique, les signatures rythmiques complexes sont difficiles à percevoir. Les pieds trisyllabiques sont probablement un juste milieu. Voir `./longueur_syllabique.py`.
 
 ## Lancer l'analyse
 
