@@ -1,13 +1,11 @@
-# Pieds poétiques naturels en français
+# Pieds poétiques naturels en francitan
 
-Le but de ce logiciel est de calculer quels types de pieds correspondent fréquemment aux mots français. Autrement dit, quel pied est le plus naturel en français.
+Le but de ce logiciel est de calculer quels types de pieds poétiques correspondent à la prosodie francitane. Autrement dit, quels pieds semblent naturels à l'oreille.
 
-Pour le moment ce logiciel est assez peu précis, il a 2 façons de calculer l'accent principal et ne calcule aucun accent secondaire.
-
-Il semblerait que:
+Pour le moment ce logiciel est assez peu précis, il a 2 façons de calculer l'accent principal et ne calcule aucun accent secondaire. Ceci étant dit, voici les trouvailles:
 
 - les mots oxytons sont à peu près aussi communs que les mots paroxytons (donc les ïambes que les trochées, et les anapestes que les amphibraques). Voir `./freq_pied.py`.
-- étant donné la prévalence des monosyllabes (généralement non-accentués), les rythmes avec un certain nombre de temps semblent plus naturels. Cependant si on fait un parallèle avec la musique, les signatures rythmiques complexes sont difficiles à percevoir. Les pieds trisyllabiques sont probablement un juste milieu. Voir `./longueur_syllabique.py`.
+- une phrase a en moyenne un accent toutes les 4 ou 5 syllabes. Les rythmes avec un nombre de temps similaires devraient donc paraitre plus naturels. Cependant si on fait un parallèle avec la musique, les signatures rythmiques complexes sont difficiles à percevoir correctement. À expérimenter, mais il est probable que les pieds trisyllabiques soit un juste milieu. Voir `./longueur_syllabique.py`.
 
 ## Lancer l'analyse
 
